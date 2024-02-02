@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <style>
+            .update
+            {
+                background-color: rgb(240, 239, 239);
+                font-family: Roboto;
+                display: block;
+                margin-top: 130px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 40px;
+                border-radius: 18px;
+                width: 500px;
+                height: 400px;
+                box-shadow: 0px 0px 15px  rgb(106, 94, 198);
+            }
+            .part-1
+            {
+                vertical-align: top;
+                width: 230px;
+                height: 350px;
+                margin-left: 20px;
+                display: inline-block;
+            }
+            .head
+            {
+                margin-top: 15px;
+                font-size: 30px;
+            }
+            .descr
+            {
+                display: block;
+                font-size: 12px;
+            }
+            .text-icon:hover
+            {
+                font-size: 11px;
+            }
+            
+            .text-icon
+            {
+                display:inline-block;
+                margin-top: 8px;
+                font-size: 10px;
+                transition: 0.2s;
+            }
+            .icon
+            {
+                vertical-align: middle;
+                width: 8px;
+                display: inline-block;
+                transition: 0.2s;
+            }
+            .icon:hover
+            {
+                width: 13px;
+            }
+            .head-email
+            {
+
+                margin-top:20px;
+                font-weight: bold;
+                font-size: 12px;
+                margin-bottom:5px;
+            }
+            .Email
+            {
+                width: 200px;
+                border-radius: 4px; 
+                border-style: solid;
+                border-width: 0.5px;
+                font-size: 11px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 11px;
+            }
+            .button
+            {
+                background-color:  rgb(39, 30, 108);
+                border-radius: 4px;
+                color: white;
+                width: 213px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-style: solid;
+                border-width: 1px;
+                margin-top: 15px;
+                cursor: pointer;
+                border-color: white;
+                font-size: 12px;
+                transition: background-color 0.2s, font-size 0.2s,
+                border-color 0.2s, font-size 0.2s;
+            }
+            .button:hover
+            {
+                border-color: white;
+                background-color:  rgb(39, 30, 108);
+                /* font-size: 13px; */
+            }
+            .button:active
+            {
+                /* font-size: 13px; */
+                border-width: 0.5px;
+                background-color: rgba(222, 80, 14, 0.865);
+                border-color: rgb(39, 30, 108);
+            }
+            .part-2
+            {
+                display: inline-block;
+                width: 240px;
+                height: 390px;
+            }
+            .the-image
+            {
+                padding-top: 4px;
+                width: 230px;
+                height: auto;
+            }
+            body
+            {
+                background-color: rgb(24, 21, 50);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="background">
+
+            <div class="update">
+                <div class="part-1">
+                    <h2 class="head" >Stay updated !</h2>
+                <p class="descr">
+                    join 60,000+ product managers
+                    receiving monthly updates on:
+                </p>
+                <div class="icons-and-text">
+                    <div>
+                        <img class="icon" src="icon-list.svg">
+                        <p class="text-icon"> Product discovery and building what matter </p>
+                        </div>
+                        <div>
+                            <img class="icon" src="icon-list.svg">
+                            <p class="text-icon"> mesuring to ensure updates are a
+                                success </p>
+                            </div>
+                            <div>
+                                <img class="icon" src="icon-list.svg">
+                                <p class="text-icon">  and much more!  </p>
+                            </div>
+                        </div>
+                        <div class="mail">
+                            <p class="head-email"> Email address</p>
+                            <input class="Email" type="text" placeholder="example@gmail.com">
+                        </div>
+                        <div>
+                    <button onclick="alert('Subscribed');" class="button">Subscribe Now</button>
+                </div>
+            </div>
+            <div class="part-2">
+                <img class="the-image" src="illustration-sign-up-desktop.svg">
+            </div>
+        </div>
+    </div>
+   
+    </body>
+</html>

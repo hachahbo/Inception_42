@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  wordpress:
+    build: ./wordpress
+    container_name: wordpress
+    env_file:
+      - "env"
+      # WORDPRESS_DB_HOST: db
+      # WORDPRESS_DB_USER: exampleuser
+      # WORDPRESS_DB_PASSWORD: examplepass
+      # WORDPRESS_DB_NAME: exampledb
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - my-network
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "443:443"
+    volumes:
+      - wordpress:/var/www/html
+    depends_on:
+      - wordpress
+    networks:
+      - my-network
+
+  mariadb:
+    build : ./mariadb
+    container_name: mariadb
+    env_file:
+      - "env"
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - my-network
+
+volumes:
+  wordpress:
+  db:
+
+networks:
+  my-network:
+    driver: bridge
