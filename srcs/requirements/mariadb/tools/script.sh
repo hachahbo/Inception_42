@@ -13,8 +13,8 @@ if mariadb -e "SHOW DATABASES LIKE '${WORDPRESS_DB_NAME}'" | grep "${WORDPRESS_D
 else
     # Create database and user allowing connection from any host
     mariadb -e "CREATE DATABASE ${WORDPRESS_DB_NAME};
-                 CREATE USER '${WORDPRESS_DB_USER}'@'%' IDENTIFIED BY '${WORDPRESS_DB_PASSWORD}';
-                 GRANT ALL PRIVILEGES ON ${WORDPRESS_DB_NAME}.* TO '${WORDPRESS_DB_USER}'@'%';"
+                CREATE USER '${WORDPRESS_DB_USER}'@'%' IDENTIFIED BY '${WORDPRESS_DB_PASSWORD}';
+                GRANT ALL PRIVILEGES ON ${WORDPRESS_DB_NAME}.* TO '${WORDPRESS_DB_USER}'@'%';"
     mariadb -e "FLUSH PRIVILEGES";
     echo "Database '${WORDPRESS_DB_NAME}' created successfully."
 fi

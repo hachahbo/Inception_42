@@ -7,11 +7,10 @@ RUN apt update -y && \
 
 WORKDIR /var/www/html
 
-COPY *.sh .
+COPY ./tools/*.sh .
 
 RUN  chmod 777 ./setup_env.sh
 
 EXPOSE 9000
 
-# CMD ["tail","-f","/dev/null"]
 CMD ["sh", "/var/www/html/setup_env.sh"]

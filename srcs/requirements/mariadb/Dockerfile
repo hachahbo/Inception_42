@@ -7,12 +7,10 @@ RUN apt update -y && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /var/run;
-COPY ./conf/*.cnf /etc/mysql/mariadb.conf.d/
-COPY ./*.sh .
+# COPY ./conf/*.conf /etc/mysql/mariadb.conf.d/
+WORKDIR /
+COPY ./tools/*.sh .
 RUN chmod 777 ./*.sh
 EXPOSE 3306
 
-WORKDIR /
-
 CMD [ "./script.sh" ]
-# CMD ["tail", "-f", "/dev/null"]
